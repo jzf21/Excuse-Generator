@@ -1,0 +1,101 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles3.css">
+      <style>
+        #randomquote{
+  margin-left: 20px;
+   text-align: left;
+   margin-right: 40px;
+   margin-top: 20px;
+
+}
+body{
+    background-color: rgba(0, 128, 128, 0.76);
+   
+}
+#randomqoute{
+    margin: auto;
+}
+
+#container{
+    width: 60%;
+    height: 30%;
+    position: relative;
+    top:10%;
+    left:20%;
+    display: block;
+    padding: 35px;
+    text-align: left;
+
+    
+    
+    background-color:#C0DCEC;
+    color: #45B08C;
+    font-size: 40px;
+    font-weight: 800;
+}
+h1{text-align: center;
+margin-top: 50px;margin-bottom:30px;
+color: #00a0a1 ;
+  border-color: blanchedalmond;
+        }
+
+
+    
+.butt{
+    display: block;
+  margin-bottom:20%;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+     top:10%;
+     left: 45%;
+     width: 10%;
+     background-color: aquamarine;
+     border-radius: 20px;
+     border-color: transparent;
+     padding: 20px;
+     font-size: 24px;
+     font-weight: 1000;
+     color:#00121d;
+     transition: all  0.5s;
+     cursor: pointer;
+  
+ }
+.butt:hover{
+
+     background: rgb(20, 238, 165);
+     color:rgb(3, 50, 80);
+     
+    
+ }
+      </style>
+        
+    </head>
+<body>
+    <h1>NEED AN EXCUSE?
+  </h1>
+<div id=container><div id="randomquote">
+
+</div>
+</div>
+
+<div class="butt" onclick="newQuote()">Generate </div>
+
+
+</body>
+<script>
+  var array=['I\'m sorry but all the people I know died and that\'s why I can\'t make it. I would have really loved to come.','My homework is trying to eat me.','I think I sprained my ankle, have to check with the doctor.','I LOST MY LEG.IT\'S GONE!','My closet is on fire! I don\'t have anything to wear','Satan needs me,','My door is on fire.I don\'t think this is worth third degree burns','Couldn\'t find an excuse. Please try again.'
+]
+
+
+function newQuote(){
+    var randomnumber=Math.floor(Math.random()*(array.length));
+    document.getElementById('randomquote').innerHTML=array[randomnumber];
+    console.log(array[randomnumber]);
+
+}
+newQuote();
+</script>
+</html>
