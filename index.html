@@ -81,19 +81,26 @@ color: #00a0a1 ;
 </div>
 </div>
 
-<div class="butt" onclick="newQuote()">Generate </div>
+  <div class="butt" onclick="newQuote()">Generate</div>
 
 
 </body>
 <script>
-  var array=['I\'m sorry but all the people I know died and that\'s why I can\'t make it. I would have really loved to come.','My homework is trying to eat me.','I think I sprained my ankle, have to check with the doctor.','I LOST MY LEG.IT\'S GONE!','My closet is on fire! I don\'t have anything to wear','Satan needs me,','My door is on fire.I don\'t think this is worth third degree burns','Couldn\'t find an excuse. Please try again.'
+  var array=['I\'m sorry but all the people I know died and that\'s why I can\'t make it. I would have really loved to come.','My homework is trying to eat me.','I think I sprained my ankle, have to check with the doctor.','I LOST MY LEG.IT\'S GONE!','My closet is on fire! I don\'t have anything to wear','Satan needs me,','My door is on fire.I don\'t think this is worth third degree burns','Couldn\'t find an excuse. You have to suffer small talk.','Just got rickrolled.'
 ]
 
-
+function openSite(){
+  window.open("https://youtu.be/dQw4w9WgXcQ", '_blank');
+          
+     
+    };
+  
 function newQuote(){
     var randomnumber=Math.floor(Math.random()*(array.length));
     document.getElementById('randomquote').innerHTML=array[randomnumber];
     console.log(array[randomnumber]);
+  if(randomnumber==array.length-1){
+    openSite()}
 
 }
 newQuote();
